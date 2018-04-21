@@ -14,7 +14,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController title="WelcomeScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="tinder" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="Home" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -62,16 +62,58 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vny-vb-Hz3"/>
                     </view>
+                    <connections>
+                        <outlet property="userImageView" destination="eqA-tK-c7F" id="HkN-IS-B25"/>
+                        <segue destination="CZf-4f-ZC7" kind="presentation" identifier="Cards" id="7ed-OI-YBZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UHn-Oo-OZs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="Qua-Uh-If4"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Qua-Uh-If4">
+                    <connections>
+                        <action selector="didPanUserImage:" destination="xWS-bP-t1b" id="iBw-9G-koT"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="829.60000000000002" y="126.38680659670166"/>
+            <point key="canvasLocation" x="826" y="126"/>
+        </scene>
+        <!--ProfileViewController-->
+        <scene sceneID="cd3-JN-LFV">
+            <objects>
+                <viewController storyboardIdentifier="Profile" title="ProfileViewController" id="CZf-4f-ZC7" customClass="ProfileViewController" customModule="tinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ADY-iR-Itp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nav_bar2" translatesAutoresizingMaskIntoConstraints="NO" id="BTS-MN-oEQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yZC-Sn-Ao3">
+                                <rect key="frame" x="45" y="109" width="299" height="270"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TinderProfileDetails" translatesAutoresizingMaskIntoConstraints="NO" id="NkT-DV-8iH">
+                                <rect key="frame" x="45" y="387" width="299" height="260"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="a11-sg-caf"/>
+                    </view>
+                    <connections>
+                        <outlet property="navBarImageView" destination="BTS-MN-oEQ" id="Wg8-iV-XIz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MlW-9e-CTd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1576.8" y="126.38680659670166"/>
         </scene>
     </scenes>
     <resources>
+        <image name="TinderProfileDetails" width="1084" height="846"/>
         <image name="action_buttons" width="320" height="108"/>
         <image name="nav_bar" width="320" height="65"/>
+        <image name="nav_bar2" width="320" height="65"/>
         <image name="ryan" width="449" height="514"/>
         <image name="tinder_logo" width="586" height="600"/>
     </resources>
