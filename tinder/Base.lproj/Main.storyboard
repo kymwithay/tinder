@@ -27,12 +27,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="xWS-bP-t1b" kind="showDetail" id="H79-sU-Q04"/>
+                        <segue destination="xWS-bP-t1b" kind="show" id="Tvk-BZ-Sa9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="127.28635682158921"/>
+            <point key="canvasLocation" x="42" y="125"/>
         </scene>
         <!--CardsViewController-->
         <scene sceneID="Lu6-vm-fPX">
@@ -64,7 +64,7 @@
                     </view>
                     <connections>
                         <outlet property="userImageView" destination="eqA-tK-c7F" id="HkN-IS-B25"/>
-                        <segue destination="CZf-4f-ZC7" kind="presentation" identifier="Cards" id="7ed-OI-YBZ"/>
+                        <segue destination="CZf-4f-ZC7" kind="presentation" identifier="Profile" id="7ed-OI-YBZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UHn-Oo-OZs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -88,7 +88,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yZC-Sn-Ao3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ryan" translatesAutoresizingMaskIntoConstraints="NO" id="yZC-Sn-Ao3">
                                 <rect key="frame" x="45" y="109" width="299" height="270"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -102,6 +102,7 @@
                     </view>
                     <connections>
                         <outlet property="navBarImageView" destination="BTS-MN-oEQ" id="Wg8-iV-XIz"/>
+                        <outlet property="profileImageView" destination="yZC-Sn-Ao3" id="Zoh-E8-wI3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MlW-9e-CTd" userLabel="First Responder" sceneMemberID="firstResponder"/>

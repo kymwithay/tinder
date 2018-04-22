@@ -10,6 +10,7 @@ import UIKit
 
 class ProfileViewController: UIViewController, UIGestureRecognizerDelegate {
     
+    @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var navBarImageView: UIImageView!
     
 
